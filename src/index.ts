@@ -28,16 +28,17 @@ const startPeg = 1
 const endPeg = 3
 
 //Input
-const userInput = prompt('How may disks you want?: ')
+console.log('Tower of Hanoi program')
+const userInput = prompt('How many disks would you like in your tower (1->): ')
 try {
   const nOfDisks = parseInt(userInput)
   if (nOfDisks > 0) {
     hanoi(nOfDisks, startPeg, endPeg)
   } else {
-    console.log('\nPlease enter a positive integer')
+    console.log('\nThis is not possible(need positive numbers)')
   }
 } catch (e) {
-  console.log('\nThis is not an integer')
+  console.log('\nInvalid input')
 }
 
 console.log('\nDone.')
